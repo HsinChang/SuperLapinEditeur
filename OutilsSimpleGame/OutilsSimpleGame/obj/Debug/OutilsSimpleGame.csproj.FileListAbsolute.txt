@@ -1,0 +1,15 @@
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\OutilsSimpleGame.exe.config
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\OutilsSimpleGame.exe
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\OutilsSimpleGame.pdb
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\App.g.cs
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame_MarkupCompile.cache
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame_MarkupCompile.lref
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.g.resources
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.Properties.Resources.resources
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.csproj.GenerateResource.cache
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.csproj.CoreCompileInputs.cache
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.exe
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.pdb
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.csprojAssemblyReference.cache
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\MainWindow.g.cs
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\MainWindow.baml
