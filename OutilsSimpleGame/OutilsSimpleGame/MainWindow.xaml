@@ -7,7 +7,14 @@
         mc:Ignorable="d"
         Title="Game Editor" Height="450" Width="800">
     <Grid Background="#FF8C84CC">
-        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="423" Margin="0,0,0,-0.5" VerticalAlignment="Top" Width="795">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="158*"/>
+            <ColumnDefinition Width="14*"/>
+            <ColumnDefinition Width="623*"/>
+        </Grid.ColumnDefinitions>
+        <Button x:Name="buttonOpen" Content="Launch Game" HorizontalAlignment="Left" Margin="10,3,5,0" VerticalAlignment="Top" Width="85" Grid.ColumnSpan="3" Click="ButtonOpen_Click"/>
+        <Button x:Name="buttonClose" Content="Close Game" HorizontalAlignment="Left" Margin="-75,3,5,0" VerticalAlignment="Top" Width="85" Grid.Column="2" Click="ButtonClose_Click"/>
+        <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="400" Margin="0,23,0,-0.5" VerticalAlignment="Top" Width="795" Grid.ColumnSpan="3">
             <TabItem Header="Information">
                 <Grid Background="#FFE5E5E5" Margin="0,0,0,-3">
                     <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="654,10,0,0" VerticalAlignment="Top" Width="113"/>
@@ -52,7 +59,5 @@
                 </Grid>
             </TabItem>
         </TabControl>
-        <Button x:Name="buttonOpen" Content="Launch Game" HorizontalAlignment="Left" Margin="120,-20,0,0" VerticalAlignment="Top" Width="85"/>
-        <Button x:Name="buttonClose" Content="Close Game" HorizontalAlignment="Left" Margin="210,-20,0,0" VerticalAlignment="Top" Width="85"/>
     </Grid>
 </Window>

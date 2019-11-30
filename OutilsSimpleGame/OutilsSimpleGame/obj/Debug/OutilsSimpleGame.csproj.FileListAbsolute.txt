@@ -13,3 +13,7 @@ C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimp
 C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.csprojAssemblyReference.cache
 C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\MainWindow.g.cs
 C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\MainWindow.baml
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\TheGame.exe
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\TheGame.pdb
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\bin\Debug\TheGame.exe.config
+C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\OutilsSimpleGame\obj\Debug\OutilsSimpleGame.csproj.CopyComplete
