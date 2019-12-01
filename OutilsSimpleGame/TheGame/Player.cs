@@ -8,7 +8,7 @@ using System.Windows.Media.Imaging;
 
 namespace TheGame
 {
-    class Player
+    public class Player
     {
         public BitmapImage PlayerImage;
         public int gravity;

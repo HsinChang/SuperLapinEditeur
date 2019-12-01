@@ -21,7 +21,7 @@
                         <ColumnDefinition Width="86*"/>
                         <ColumnDefinition Width="703*"/>
                     </Grid.ColumnDefinitions>
-                    <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="568.372,10,0,0" VerticalAlignment="Top" Width="113" Grid.Column="1"/>
+                    <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="568.372,10,0,0" VerticalAlignment="Top" Width="113" Grid.Column="1" Click="ButtonSave_Click"/>
                     <Button x:Name="buttonLoad" Content="Load Configuration" HorizontalAlignment="Left" Margin="568.372,35,0,0" VerticalAlignment="Top" Width="113" Click="ButtonLoad_Click" Grid.Column="1"/>
                     <ListView x:Name="listBox" HorizontalAlignment="Left" Height="341" Margin="7,11,0,0" VerticalAlignment="Top" Width="140" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="2"/>
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="166" Margin="113.372,50,0,0" VerticalAlignment="Top" Width="351" Grid.Column="1">
@@ -37,37 +37,59 @@
             </TabItem>
             <TabItem Header="Edit">
                 <Grid Background="#FFE5E5E5" Margin="0,-1,0,-2" RenderTransformOrigin="0.498,0.503">
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="119" Margin="38,70,0,0" VerticalAlignment="Top" Width="118">
-                        <Image x:Name="image" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="9,8,0,0"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="34*"/>
+                        <ColumnDefinition Width="755*"/>
+                    </Grid.ColumnDefinitions>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="119" Margin="4.149,70,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1">
+                        <Image x:Name="imagePlayer" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="9,8,0,0"/>
                     </Border>
-                    <Label x:Name="label" Content="Edit Player Photo" HorizontalAlignment="Left" Height="34" Margin="38,31,0,0" VerticalAlignment="Top" Width="106"/>
-                    <Button x:Name="buttonPlayerPhoto" Content="Select Player Photo" HorizontalAlignment="Left" Height="24" Margin="37,201,0,0" VerticalAlignment="Top" Width="119"/>
-                    <Button x:Name="buttonSavePlayer" Content="Save Player" HorizontalAlignment="Left" Margin="59,244,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonEnemyPhoto" Content="Select Enemy Photo" HorizontalAlignment="Left" Margin="207,203,0,0" VerticalAlignment="Top" Width="115"/>
-                    <Label x:Name="label1" Content="Speed:" HorizontalAlignment="Left" Margin="225,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.631,0.194"/>
-                    <Label x:Name="label2" Content="Name:" HorizontalAlignment="Left" Margin="226,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.19,0.422"/>
-                    <TextBox x:Name="textBoxSpeed" HorizontalAlignment="Left" Height="23" Margin="276,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="276,273,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="119" Margin="204,70,0,0" VerticalAlignment="Top" Width="118">
-                        <Image x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="9,8,0,0"/>
+                    <Label x:Name="label" Content="Edit Player Photo" HorizontalAlignment="Left" Height="34" Margin="4.149,31,0,0" VerticalAlignment="Top" Width="106" Grid.Column="1"/>
+                    <Button x:Name="buttonPlayerPhoto" Content="Select Player Photo" HorizontalAlignment="Left" Height="24" Margin="3.149,201,0,0" VerticalAlignment="Top" Width="119" Click="ButtonPlayerPhoto_Click" Grid.Column="1"/>
+                    <Button x:Name="buttonSavePlayer" Content="Save Player" HorizontalAlignment="Left" Margin="25.149,244,0,0" VerticalAlignment="Top" Width="75" Click="ButtonSavePlayer_Click" Grid.Column="1"/>
+                    <Button x:Name="buttonEnemyPhoto" Content="Select Enemy Photo" HorizontalAlignment="Left" Margin="173.149,203,0,0" VerticalAlignment="Top" Width="115" Click="ButtonEnemyPhoto_Click" Grid.Column="1"/>
+                    <Label x:Name="label1" Content="Speed:" HorizontalAlignment="Left" Margin="191.149,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.631,0.194" Grid.Column="1"/>
+                    <Label x:Name="label2" Content="Name:" HorizontalAlignment="Left" Margin="192.149,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.19,0.422" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxSpeed" HorizontalAlignment="Left" Height="23" Margin="242.149,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="242.149,273,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120" Grid.Column="1"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="119" Margin="170.149,70,0,0" VerticalAlignment="Top" Width="118" Grid.Column="1">
+                        <Image x:Name="imageEnemy" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="9,8,0,0"/>
                     </Border>
-                    <Label x:Name="Edit_Player" Content="Edit Player" HorizontalAlignment="Left" Margin="38,0,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label x:Name="Edit_enemy" Content="Edit Enemy" HorizontalAlignment="Left" Margin="278,0,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.523,1.144"/>
-                    <ComboBox x:Name="comboBox" HorizontalAlignment="Left" Margin="344,110,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.56,0.72"/>
-                    <Button x:Name="buttonSaveEnemy" Content="Save Enemy" HorizontalAlignment="Left" Margin="185,341,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.026,0.445"/>
-                    <Label x:Name="label4" Content="Select the enemy to edit:" HorizontalAlignment="Left" Margin="334,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.451,0.652"/>
-                    <Slider x:Name="slider" HorizontalAlignment="Left" Margin="577,237,0,0" VerticalAlignment="Top" Width="119" Maximum="5"/>
-                    <Button x:Name="buttonAddEnemy" Content="Add New Enemy" HorizontalAlignment="Left" Margin="265,341,0,0" VerticalAlignment="Top" Width="101"/>
-                    <Label x:Name="Edit_Wave" Content="Edit Wave" HorizontalAlignment="Left" Margin="577,0,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.523,1.144"/>
-                    <Label x:Name="label5" Content="Number:" HorizontalAlignment="Left" Margin="505,236,0,0" VerticalAlignment="Top"/>
-                    <Label x:Name="label6" Content="Select Wave:" HorizontalAlignment="Left" Margin="505,70,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="comboBoxSelectWave" HorizontalAlignment="Left" Margin="601,74,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Label x:Name="label6_Copy" Content="Select Enemy Type:" HorizontalAlignment="Left" Margin="470,151,0,0" VerticalAlignment="Top"/>
-                    <ComboBox x:Name="comboBox1" HorizontalAlignment="Left" Margin="601,155,0,0" VerticalAlignment="Top" Width="120"/>
-                    <Button x:Name="buttonSaveWave" Content="Save Wave" HorizontalAlignment="Left" Margin="495,341,0,0" VerticalAlignment="Top" Width="75"/>
-                    <Button x:Name="buttonAddWave" Content="Add New Wave" HorizontalAlignment="Left" Margin="577,341,0,0" VerticalAlignment="Top" Width="101"/>
-                    <Button x:Name="buttonDeleteWave" Content="Delete Wave" HorizontalAlignment="Left" Margin="683,341,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.384,0.362"/>
-                    <Button x:Name="buttonDeleteEnemy" Content="Delete Enemy" HorizontalAlignment="Left" Margin="371,341,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.384,0.362"/>
+                    <Label x:Name="Edit_Player" Content="Edit Player" HorizontalAlignment="Left" Margin="4.149,0,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+                    <Label x:Name="Edit_enemy" Content="Edit Enemy" HorizontalAlignment="Left" Margin="244.149,0,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.523,1.144" Grid.Column="1"/>
+                    <ComboBox x:Name="comboBoxEnemyEdit" HorizontalAlignment="Left" Margin="310.149,110,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="-0.56,0.72" ItemsSource="{Binding enemies}" SelectionChanged="ComboBoxEnemyEdit_SelectionChanged" Grid.Column="1">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock x:Name="enemyEditBlock" Text="{Binding name}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Button x:Name="buttonSaveEnemy" Content="Update Enemy" HorizontalAlignment="Left" Margin="141.149,341,0,0" VerticalAlignment="Top" Width="85" RenderTransformOrigin="-0.026,0.445" Click="ButtonSaveEnemy_Click" Grid.Column="1"/>
+                    <Label x:Name="label4" Content="Select the enemy to edit:" HorizontalAlignment="Left" Margin="300.149,70,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.451,0.652" Grid.Column="1"/>
+                    <Slider x:Name="slider" HorizontalAlignment="Left" Margin="543.149,237,0,0" VerticalAlignment="Top" Width="119" Maximum="5" AutoToolTipPlacement="TopLeft" AutoToolTipPrecision="0" Grid.Column="1"/>
+                    <Button x:Name="buttonAddEnemy" Content="Add New Enemy" HorizontalAlignment="Left" Margin="231.149,341,0,0" VerticalAlignment="Top" Width="101" Click="ButtonAddEnemy_Click" Grid.Column="1"/>
+                    <Label x:Name="Edit_Wave" Content="Edit Wave" HorizontalAlignment="Left" Margin="543.149,0,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.523,1.144" Grid.Column="1"/>
+                    <Label x:Name="label5" Content="Number:" HorizontalAlignment="Left" Margin="471.149,236,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <Label x:Name="label6" Content="Select Wave:" HorizontalAlignment="Left" Margin="471.149,70,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <ComboBox x:Name="comboBoxSelectWave" HorizontalAlignment="Left" Margin="567.149,74,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding waves}" Grid.Column="1" SelectionChanged="ComboBoxSelectWave_SelectionChanged">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding id}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Label x:Name="label6_Copy" Content="Select Enemy Type:" HorizontalAlignment="Left" Margin="436.149,151,0,0" VerticalAlignment="Top" Grid.Column="1"/>
+                    <ComboBox x:Name="comboBoxType" HorizontalAlignment="Left" Margin="567.149,155,0,0" VerticalAlignment="Top" Width="120" ItemsSource="{Binding enemies}" Grid.Column="1">
+                        <ComboBox.ItemTemplate>
+                            <DataTemplate>
+                                <TextBlock Text="{Binding name}"/>
+                            </DataTemplate>
+                        </ComboBox.ItemTemplate>
+                    </ComboBox>
+                    <Button x:Name="buttonSaveWave" Content="Update Wave" HorizontalAlignment="Left" Margin="451,341,0,0" VerticalAlignment="Top" Width="85" Grid.Column="1" Click="ButtonSaveWave_Click"/>
+                    <Button x:Name="buttonAddWave" Content="Add New Wave" HorizontalAlignment="Left" Margin="543.149,341,0,0" VerticalAlignment="Top" Width="101" Grid.Column="1" Click="ButtonAddWave_Click"/>
+                    <Button x:Name="buttonDeleteWave" Content="Delete Wave" HorizontalAlignment="Left" Margin="649.149,341,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="0.384,0.362" Grid.Column="1" Click="ButtonDeleteWave_Click"/>
+                    <Button x:Name="buttonDeleteEnemy" Content="Delete Enemy" HorizontalAlignment="Left" Margin="337.149,341,0,0" VerticalAlignment="Top" Width="79" RenderTransformOrigin="0.384,0.362" Click="ButtonDeleteEnemy_Click" Grid.Column="1"/>
                 </Grid>
             </TabItem>
         </TabControl>

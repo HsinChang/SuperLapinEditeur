@@ -16,10 +16,12 @@
     <Wave>
       <type>vivendi</type>
       <number>4</number>
+      <id>1</id>>
     </Wave>
     <Wave>
       <type>EA</type>
       <number>3</number>
+      <id>2</id>
     </Wave>
   </waves>
 </Configuration>

@@ -11,11 +11,13 @@ namespace TheGame
     {
         public string type { set; get; }
         public int number { set; get; }
+        public int id { set; get; }
 
-        public Wave(string type, int number)
+        public Wave(string type, int number, int id)
         {
             this.type = type;
             this.number = number;
+            this.id = id;
         }
         public Wave()
         {

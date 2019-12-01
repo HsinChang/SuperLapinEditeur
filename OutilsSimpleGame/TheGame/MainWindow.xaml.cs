@@ -35,6 +35,18 @@ namespace TheGame
             timer.Start();
         }
 
+        public MainWindow(Player player, Configuration configuration)
+        {
+            InitializeComponent();
+            this.Name = "Game";
+            this.gameViewModel = new GameViewModel(player, configuration);
+            DataContext = gameViewModel;
+            DispatcherTimer timer = new DispatcherTimer();
+            timer.Interval = TimeSpan.FromSeconds(0.1);
+            timer.Tick += timer_Tick;
+            timer.Start();
+        }
+
         void PlayerJump(object sender, MouseButtonEventArgs e)
         {
             gameViewModel.PlayerJump();
@@ -95,9 +107,10 @@ namespace TheGame
                         //Check if there is a game window opened
                         MessageBox.Show("You have passed all enemies!");
                         Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game");
+                        canvas.Children.Clear();
                         win.Close();
-                        return;
                     }
+                    return;
                 }
                 string enemyName = gameViewModel.configuration.waves.ElementAt(waveNum).type;
                 int enemyNum = gameViewModel.configuration.waves.ElementAt(waveNum).number;
@@ -155,15 +168,12 @@ namespace TheGame
                         int speed = gameViewModel.configuration.enemies.Find(i => i.name == enemyName).speed;
                         Canvas.SetRight(x, Canvas.GetRight(x) + speed);
                     }
-                    if(val + x.ActualWidth>= 670)
+                   else if(val >= 670)
                     {
                         //Check if there is a game window opened
                         if (Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game") != null)
                         {
-                            MessageBox.Show("Enemies crossed your defense!");
-                            Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game");
-                            win.Close();
-                            return;
+                            x.Tag = "invalid";
                         }
                     }
 
@@ -208,7 +218,37 @@ namespace TheGame
                     canvas.Children.Remove(child.ElementAt(i));
                 }
             }
-            
+
+            //hit by enemy
+            foreach (var x in canvas.Children.OfType<Image>())
+            {
+                if (x.Tag == "enemy")
+                {
+                    //Some values are not initialized, TranslatePoint() needed for exact actual position
+                    Rect rect1 = new Rect();
+                    Point p1 = imagePlayer.TranslatePoint(new Point(0, 0), canvas);
+                    rect1.X = p1.X;
+                    rect1.Y = p1.Y;
+                    rect1.Width = (float)imagePlayer.ActualWidth;
+                    rect1.Height = (float)imagePlayer.ActualHeight;
+
+                    Rect rect2 = new Rect();
+                    Point p2 = x.TranslatePoint(new Point(0, 0), canvas);
+                    rect2.X = p2.X;
+                    rect2.Y = p2.Y;
+                    rect2.Width = (float)x.ActualWidth;
+                    rect2.Height = (float)x.ActualHeight;
+
+                    if (rect1.IntersectsWith(rect2))
+                    {
+                        MessageBox.Show("You were hit by enemy");
+                        Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game");
+                        canvas.Children.Clear();
+                        win.Close();
+                    }
+                }
+            }
+
         }
         #endregion
     }

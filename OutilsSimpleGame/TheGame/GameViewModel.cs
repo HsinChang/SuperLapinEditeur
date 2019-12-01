@@ -42,6 +42,14 @@ namespace TheGame
             */
         }
 
+        public GameViewModel(Player player, Configuration configuration)
+        {
+            shoot = false;
+            currentWave = 1;
+            this.player = player;
+            this.configuration = configuration;
+        }
+
         public int GetGravity()
         {
             return player.gravity;
