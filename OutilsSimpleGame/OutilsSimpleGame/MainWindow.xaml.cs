@@ -149,6 +149,7 @@ namespace OutilsSimpleGame
         private void ButtonSavePlayer_Click(object sender, RoutedEventArgs e)
         {
             player.PlayerImage = src_temp;
+            MessageBox.Show("Player photo updated");
         }
 
         private void ButtonEnemyPhoto_Click(object sender, RoutedEventArgs e)
