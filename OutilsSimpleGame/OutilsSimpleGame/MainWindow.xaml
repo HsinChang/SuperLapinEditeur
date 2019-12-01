@@ -19,6 +19,21 @@
                 <Grid Background="#FFE5E5E5" Margin="0,0,0,-3">
                     <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="654,10,0,0" VerticalAlignment="Top" Width="113"/>
                     <Button x:Name="buttonLoad" Content="Load Configuration" HorizontalAlignment="Left" Margin="654,35,0,0" VerticalAlignment="Top" Width="113"/>
+                    <ListView x:Name="listView" HorizontalAlignment="Left" Height="341" Margin="7,11,0,0" VerticalAlignment="Top" Width="140" SelectionChanged="ListView_SelectionChanged">
+                        <ListView.View>
+                            <GridView>
+                                <GridViewColumn/>
+                            </GridView>
+                        </ListView.View>
+                    </ListView>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="166" Margin="199,50,0,0" VerticalAlignment="Top" Width="351">
+                        <Image x:Name="image2" Margin="9"/>
+                    </Border>
+                    <Label x:Name="label3" Content="Enemy Image:" HorizontalAlignment="Left" Margin="199,13,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label x:Name="label7" Content="Number:" HorizontalAlignment="Left" Margin="199,236,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label x:Name="labelNumber" Content="Label" HorizontalAlignment="Left" Margin="276,236,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label x:Name="label8" Content="Name:" HorizontalAlignment="Left" Margin="199,272,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.091,0.554"/>
+                    <Label x:Name="label9" Content="Label" HorizontalAlignment="Left" Margin="276,272,0,0" VerticalAlignment="Top" FontSize="16"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Edit">
@@ -32,10 +47,8 @@
                     <Button x:Name="buttonEnemyPhoto" Content="Select Enemy Photo" HorizontalAlignment="Left" Margin="207,203,0,0" VerticalAlignment="Top" Width="115"/>
                     <Label x:Name="label1" Content="Speed:" HorizontalAlignment="Left" Margin="225,237,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.631,0.194"/>
                     <Label x:Name="label2" Content="Name:" HorizontalAlignment="Left" Margin="226,269,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.19,0.422"/>
-                    <Label x:Name="label3" Content="Health:" HorizontalAlignment="Left" Margin="226,301,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.609,0.306"/>
                     <TextBox x:Name="textBoxSpeed" HorizontalAlignment="Left" Height="23" Margin="276,240,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
                     <TextBox x:Name="textBoxName" HorizontalAlignment="Left" Height="23" Margin="276,273,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
-                    <TextBox x:Name="textBoxHealth" HorizontalAlignment="Left" Height="23" Margin="278,304,0,0" TextWrapping="Wrap" Text="TextBox" VerticalAlignment="Top" Width="120"/>
                     <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="119" Margin="204,70,0,0" VerticalAlignment="Top" Width="118">
                         <Image x:Name="image1" HorizontalAlignment="Left" Height="100" VerticalAlignment="Top" Width="100" Margin="9,8,0,0"/>
                     </Border>

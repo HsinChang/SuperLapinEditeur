@@ -1,0 +1,23 @@
+<?xml version="1.0"?>
+<enemies>
+	<enemy>
+		<speed>10</speed>
+		<name>vivendi</name>
+		<EnemyImagePath>"C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\Datas\640px-Vivendi_logo.svg.png"</EnemyImagePath>
+	</enemy>
+	<enemy>
+		<speed>12</speed>
+		<name>EA</name>
+		<EnemyImagePath>"C:\Users\Hsin Chang\tryOn\OutilsSimpleGame\Datas\EA_logo_Electronic_Arts.png"</EnemyImagePath>
+	</enemy>
+</enemies>
+<waves>
+	<wave>
+		<type>vivendi</type>
+		<number>4</number>
+	</wave>
+	<wave>
+		<type>EA</type>
+		<number>3</number>
+	</wave>
+</waves>

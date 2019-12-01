@@ -13,10 +13,20 @@ namespace TheGame
     {
         private Player player;
         private bool shoot;
+        private int currentWave;
+        public Configuration configuration;
+
 
         public GameViewModel()
         {
             player = new Player("Icons/Rabbid.png", 5);
+            shoot = false;
+            currentWave = 1;
+            configuration = new Configuration();
+            configuration.waves.Add(new Wave("vivendi", 4));
+            configuration.waves.Add(new Wave("EA", 3));
+            configuration.enemies.Add(new Enemy(5, "vivendi", "Icons/640px-Vivendi_logo.svg.png"));
+            configuration.enemies.Add(new Enemy(7, "EA", "Icons/EA_logo_Electronic_Arts.png"));
         }
 
         public int GetGravity()
@@ -44,6 +54,16 @@ namespace TheGame
         public void SetShoot(bool st)
         {
             this.shoot = st;
+        }
+
+        public int GetWave()
+        {
+            return currentWave;
+        }
+
+        public void NextWave()
+        {
+            currentWave += 1;
         }
 
         public BitmapImage PlayerImagePlay

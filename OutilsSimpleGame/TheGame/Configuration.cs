@@ -8,5 +8,12 @@ namespace TheGame
 {
     class Configuration
     {
+        public List<Enemy> enemies { get; set; }
+        public List<Wave> waves { get; set; }
+
+        public Configuration(){
+            enemies = new List<Enemy>();
+            waves = new List<Wave>();
+        }
     }
 }

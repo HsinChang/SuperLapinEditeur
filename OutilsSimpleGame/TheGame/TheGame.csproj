@@ -55,6 +55,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Wave.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -64,6 +65,8 @@
       <SubType>Code</SubType>
     </Compile>
     <Compile Include="Bullet.cs" />
+    <Compile Include="Enemy.cs" />
+    <Compile Include="Configuration.cs" />
     <Compile Include="GameViewModel.cs" />
     <Compile Include="Player.cs" />
     <Compile Include="MainWindow.xaml.cs">
