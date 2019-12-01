@@ -17,23 +17,22 @@
         <TabControl x:Name="tabControl" HorizontalAlignment="Left" Height="400" Margin="0,23,0,-0.5" VerticalAlignment="Top" Width="795" Grid.ColumnSpan="3">
             <TabItem Header="Information">
                 <Grid Background="#FFE5E5E5" Margin="0,0,0,-3">
-                    <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="654,10,0,0" VerticalAlignment="Top" Width="113"/>
-                    <Button x:Name="buttonLoad" Content="Load Configuration" HorizontalAlignment="Left" Margin="654,35,0,0" VerticalAlignment="Top" Width="113"/>
-                    <ListView x:Name="listView" HorizontalAlignment="Left" Height="341" Margin="7,11,0,0" VerticalAlignment="Top" Width="140" SelectionChanged="ListView_SelectionChanged">
-                        <ListView.View>
-                            <GridView>
-                                <GridViewColumn/>
-                            </GridView>
-                        </ListView.View>
-                    </ListView>
-                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="166" Margin="199,50,0,0" VerticalAlignment="Top" Width="351">
-                        <Image x:Name="image2" Margin="9"/>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="86*"/>
+                        <ColumnDefinition Width="703*"/>
+                    </Grid.ColumnDefinitions>
+                    <Button x:Name="buttonSave" Content="Save Configuration" HorizontalAlignment="Left" Margin="568.372,10,0,0" VerticalAlignment="Top" Width="113" Grid.Column="1"/>
+                    <Button x:Name="buttonLoad" Content="Load Configuration" HorizontalAlignment="Left" Margin="568.372,35,0,0" VerticalAlignment="Top" Width="113" Click="ButtonLoad_Click" Grid.Column="1"/>
+                    <ListView x:Name="listBox" HorizontalAlignment="Left" Height="341" Margin="7,11,0,0" VerticalAlignment="Top" Width="140" SelectionChanged="ListBox_SelectionChanged" Grid.ColumnSpan="2"/>
+                    <Border BorderBrush="Black" BorderThickness="1" HorizontalAlignment="Left" Height="166" Margin="113.372,50,0,0" VerticalAlignment="Top" Width="351" Grid.Column="1">
+                        <Image x:Name="imageEnemyInfo" Margin="9"/>
                     </Border>
-                    <Label x:Name="label3" Content="Enemy Image:" HorizontalAlignment="Left" Margin="199,13,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label x:Name="label7" Content="Number:" HorizontalAlignment="Left" Margin="199,236,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label x:Name="labelNumber" Content="Label" HorizontalAlignment="Left" Margin="276,236,0,0" VerticalAlignment="Top" FontSize="16"/>
-                    <Label x:Name="label8" Content="Name:" HorizontalAlignment="Left" Margin="199,272,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.091,0.554"/>
-                    <Label x:Name="label9" Content="Label" HorizontalAlignment="Left" Margin="276,272,0,0" VerticalAlignment="Top" FontSize="16"/>
+                    <Label x:Name="label3" Content="Enemy Image:" HorizontalAlignment="Left" Margin="113.372,13,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+                    <Label x:Name="label7" Content="Number:" HorizontalAlignment="Left" Margin="113.372,236,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+                    <Label x:Name="labelNumber" Content="" HorizontalAlignment="Left" Margin="190.372,236,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+                    <Label x:Name="label8" Content="Name:" HorizontalAlignment="Left" Margin="113.372,272,0,0" VerticalAlignment="Top" FontSize="16" RenderTransformOrigin="0.091,0.554" Grid.Column="1"/>
+                    <Label x:Name="labelType" Content="" HorizontalAlignment="Left" Margin="190.372,272,0,0" VerticalAlignment="Top" FontSize="16" Grid.Column="1"/>
+                    <Label x:Name="label10" Content="You can use 'Launch Game' to test the new configuration" Grid.Column="1" HorizontalAlignment="Left" Height="50" Margin="328,272,0,0" VerticalAlignment="Top" Width="319"/>
                 </Grid>
             </TabItem>
             <TabItem Header="Edit">

@@ -26,6 +26,7 @@ namespace TheGame
         public MainWindow()
         {
             InitializeComponent();
+            this.Name = "Game";
             gameViewModel = new GameViewModel();
             DataContext = gameViewModel;
             DispatcherTimer timer = new DispatcherTimer();
@@ -33,8 +34,6 @@ namespace TheGame
             timer.Tick += timer_Tick;
             timer.Start();
         }
-
-        
 
         void PlayerJump(object sender, MouseButtonEventArgs e)
         {
@@ -91,9 +90,14 @@ namespace TheGame
             {
                 int waveNum = gameViewModel.GetWave()-1;
                 if(waveNum == gameViewModel.configuration.waves.Count) {
-                    MessageBox.Show("You have passed all enemies!");
-                    Application.Current.Shutdown();
-                    return;
+                    if (Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game") != null)
+                    {
+                        //Check if there is a game window opened
+                        MessageBox.Show("You have passed all enemies!");
+                        Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game");
+                        win.Close();
+                        return;
+                    }
                 }
                 string enemyName = gameViewModel.configuration.waves.ElementAt(waveNum).type;
                 int enemyNum = gameViewModel.configuration.waves.ElementAt(waveNum).number;
@@ -153,9 +157,14 @@ namespace TheGame
                     }
                     if(val + x.ActualWidth>= 670)
                     {
-                        MessageBox.Show("Enemies crossed your defense!");
-                        Application.Current.Shutdown();
-                        return;
+                        //Check if there is a game window opened
+                        if (Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game") != null)
+                        {
+                            MessageBox.Show("Enemies crossed your defense!");
+                            Window win = Application.Current.Windows.OfType<Window>().SingleOrDefault(w => w.Name == "Game");
+                            win.Close();
+                            return;
+                        }
                     }
 
                 }

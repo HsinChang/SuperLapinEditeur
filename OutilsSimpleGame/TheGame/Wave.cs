@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    class Wave
+    [Serializable]
+    public class Wave
     {
         public string type { set; get; }
         public int number { set; get; }
@@ -15,6 +16,9 @@ namespace TheGame
         {
             this.type = type;
             this.number = number;
+        }
+        public Wave()
+        {
         }
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace TheGame
 {
-    class Configuration
+    [Serializable]
+    public class Configuration
     {
         public List<Enemy> enemies { get; set; }
         public List<Wave> waves { get; set; }

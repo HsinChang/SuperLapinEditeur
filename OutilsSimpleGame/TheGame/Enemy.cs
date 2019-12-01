@@ -7,7 +7,8 @@ using System.Windows.Media.Imaging;
 
 namespace TheGame
 {
-    class Enemy
+    [Serializable]
+    public class Enemy
     {
         public int speed { get; set; }
         public string name { get; set; }
@@ -18,6 +19,10 @@ namespace TheGame
             this.speed = speed;
             this.name = name;
             this.EnemyImagePath = EnemyImagePath;
+        }
+        public Enemy()
+        {
+
         }
     }
 }
